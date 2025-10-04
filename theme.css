@@ -1,0 +1,592 @@
+    :root {
+        --fg-color-main: #f06;
+        --fg-color-main-rgb: 255, 0, 102;
+        --fg-color-warm: #f05;
+        --fg-color-warm-rgb: 255, 0, 85;
+        --fg-color-cold: #f07;
+        --fg-color-cold-rgb: 255, 0, 119;
+        --bg-color-main: #603;
+        --bg-color-main-rgb: 102, 0, 51;
+        --bg-color-dark: #34001a;
+        --bg-color-dark-rgb: 52, 0, 26;
+    }
+    *:not(#tabsContent *) {
+        font-family: "Galmuri9" !important;
+        -webkit-font-smoothing: none !important;
+        -moz-osx-font-smoothing: none !important;
+        font-weight: 100 !important;
+        font-size: 10px;
+    }
+    #tabsContent * {
+        font-family: "ProggyClean Nerd Font Mono", "PictoChat", monospace !important;
+    }
+    *::selection {
+        background: var(--fg-color-main);
+        color: white;
+    }
+    *[disabled] * {
+        filter: brightness(0.5) saturate(3.5);
+        opacity: 0.2;
+        color: rgba(var(--fg-color-main-rgb), 0.5) !important;
+    }
+    tp-yt-paper-tab.ytmusic-player-page[disabled] {
+        color: rgba(var(--fg-color-main-rgb), .5) !important;
+    }
+    ytmusic-app {
+        color: rgba(var(--fg-color-main-rgb), 0.93) !important;
+    }
+    ytmusic-browse-response[has-background]:not([disable-gradient]) .background-gradient.ytmusic-browse-response {
+        background-image: linear-gradient(to bottom, var(--bg-color-main-rgb), var(--bg-color-main)) !important;
+    }
+    yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string, .content-info-wrapper.ytmusic-player-bar .title.ytmusic-player-bar, .title.ytmusic-two-row-item-renderer {
+        color: var(--fg-color-main) !important;
+    }
+    .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline, button.ytmusic-sort-filter-button-renderer, yt-icon-button.ytmusic-carousel-shelf-renderer, ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_UNKNOWN] a.ytmusic-chip-cloud-chip-renderer, ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_DEFAULT] a.ytmusic-chip-cloud-chip-renderer, ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_ICON_SECOND] a.ytmusic-chip-cloud-chip-renderer, ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer {
+        color: var(--fg-color-main) !important;
+        border-color: rgba(var(--fg-color-main-rgb), .53) !important;
+        background-color: rgba(var(--bg-color-dark-rgb), .66) !important;
+    }
+    tp-yt-paper-dialog, .top-bar.ytmusic-dismissable-dialog-renderer {
+        color: var(--fg-color-main) !important;
+        background-color: rgba(var(--bg-color-dark-rgb), .9) !important;
+        border-color: rgba(var(--fg-color-cold-rgb), .26) !important;
+    }
+    .song-button.ytmusic-av-toggle, .video-button.ytmusic-av-toggle {
+        background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='icons_fin' data-name='icons fin' xmlns='http://www.w3.org/2000/svg' width='117' height='32' viewBox='0 0 117 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %2334011b; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='116 11 116 9 115 9 115 8 115 7 114 7 114 6 113 6 113 5 112 5 112 4 111 4 111 3 110 3 110 2 108 2 108 1 106 1 106 0 101 0 16 0 11 0 11 1 9 1 9 2 7 2 7 3 6 3 6 4 5 4 5 5 4 5 4 6 3 6 3 7 2 7 2 8 2 9 1 9 1 11 0 11 0 16 0 21 1 21 1 23 2 23 2 24 2 25 3 25 3 26 4 26 4 27 5 27 5 28 6 28 6 29 7 29 7 30 9 30 9 31 11 31 11 32 16 32 101 32 106 32 106 31 108 31 108 30 110 30 110 29 111 29 111 28 112 28 112 27 113 27 113 26 114 26 114 25 115 25 115 24 115 23 116 23 116 21 117 21 117 16 117 11 116 11'/%3E%3C/svg%3E") !important;
+        color: var(--fg-color-main) !important;
+    }
+    .av-toggle.ytmusic-av-toggle {
+        background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='icons_fin' data-name='icons fin' xmlns='http://www.w3.org/2000/svg' width='117' height='32' viewBox='0 0 117 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %2334011b; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='116 11 116 9 115 9 115 8 115 7 114 7 114 6 113 6 113 5 112 5 112 4 111 4 111 3 110 3 110 2 108 2 108 1 106 1 106 0 101 0 16 0 11 0 11 1 9 1 9 2 7 2 7 3 6 3 6 4 5 4 5 5 4 5 4 6 3 6 3 7 2 7 2 8 2 9 1 9 1 11 0 11 0 16 0 21 1 21 1 23 2 23 2 24 2 25 3 25 3 26 4 26 4 27 5 27 5 28 6 28 6 29 7 29 7 30 9 30 9 31 11 31 11 32 16 32 101 32 106 32 106 31 108 31 108 30 110 30 110 29 111 29 111 28 112 28 112 27 113 27 113 26 114 26 114 25 115 25 115 24 115 23 116 23 116 21 117 21 117 16 117 11 116 11'/%3E%3C/svg%3E") !important;
+        border-radius: 0 !important;
+        image-rendering: pixelated;
+    }
+    .time-info.ytmusic-player-bar {
+        color: rgba(var(--fg-color-main-rgb),.8) !important;
+    }
+    ytmusic-two-row-item-renderer[has-badges] #inline-badges.ytmusic-two-row-item-renderer {
+        bottom: 4px;
+    }
+    .details.style-scope.ytmusic-two-row-item-renderer {
+        margin-top: -4px;
+    }
+    yt-formatted-string.title.style-scope.ytmusic-two-row-item-renderer {
+        display: inline-flex;
+        padding: 2px 0;
+    }
+    ytmusic-carousel-shelf-renderer.style-scope.ytmusic-section-list-renderer {
+        margin: -25px 0;
+    }
+    #items.ytmusic-carousel>*.ytmusic-carousel {
+        margin-bottom: 10px;
+    }
+    ytmusic-app[is-bauhaus-sidenav-enabled] #guide-wrapper.ytmusic-app, ytmusic-nav-bar[is-bauhaus-sidenav-enabled] .center-content.ytmusic-nav-bar {
+        background: var(--bg-color-dark) !important;
+        border-right: 1px solid rgba(var(--bg-color-dark-rgb) .28)!important;
+        color: var(--fg-color-main) !important;
+        fill: var(--fg-color-main) !important;
+    }
+    .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
+        color: var(--fg-color-main) !important;
+        background: rgba(var(--fg-color-main-rgb),.5) !important;
+    }
+    .av-toggle.ytmusic-av-toggle {
+        background-color: transparent !important;
+    }
+    ytmusic-guide-entry-renderer[active] tp-yt-paper-item.ytmusic-guide-entry-renderer {
+        background-color: rgba(var(--fg-color-main-rgb),.1) !important;
+    }
+    tp-yt-paper-item.ytmusic-guide-entry-renderer:hover, ytmusic-guide-entry-renderer[active] tp-yt-paper-item.ytmusic-guide-entry-renderer:hover {
+        background: rgba(var(--fg-color-main-rgb),.2) !important;
+    }
+    iron-selector#chips {
+        scrollbar-color: transparent transparent !important;
+    }
+    .subtitle.ytmusic-queue-header-renderer, .duration.ytmusic-player-queue-item, .byline.ytmusic-player-queue-item, .tab.ytmusic-tabs, .footer.ytmusic-description-shelf-renderer, .text.ytmusic-message-renderer, .subtext.ytmusic-message-renderer {
+        color: rgba(var(--fg-color-main-rgb),.8) !important;
+        --yt-endpoint-color: rgba(var(--fg-color-main-rgb),.8) !important;
+        --yt-endpoint-hover-color: rgba(var(--fg-color-main-rgb),.8) !important;
+        --yt-endpoint-visited-color: rgba(var(--fg-color-main-rgb),.8) !important;
+    }
+    .song-title.ytmusic-player-queue-item, .title.ytmusic-carousel-shelf-basic-header-renderer, ytmusic-tabs.iron-selected .tab.ytmusic-tabs, .tab.selected.ytmusic-tabs, yt-formatted-string.ytmusic-menu-service-item-download-renderer, .text.ytmusic-toggle-menu-service-item-renderer, .text.ytmusic-menu-navigation-item-renderer, .text.ytmusic-menu-title-renderer, .text.ytmusic-multi-select-menu-item-renderer {
+        color: rgba(var(--fg-color-main-rgb),.93) !important;
+        --yt-endpoint-color: rgba(var(--fg-color-main-rgb),.93);
+        --yt-endpoint-hover-color: var(--fg-color-main) !important;
+        --yt-endpoint-visited-color: rgba(var(--fg-color-main-rgb),.8) !important;
+    }
+    ytmusic-tabs.iron-selected .tab.ytmusic-tabs, .tab.selected.ytmusic-tabs {
+        border-bottom: 2px solid var(--fg-color-main) !important;
+    }
+    iron-selector#chips:hover {
+        scrollbar-color: rgba(var(--fg-color-main-rgb),.53) transparent !important;
+    }
+    ytmusic-search-box[is-bauhaus-sidenav-enabled]:not([opened]):not([has-query]) .search-box.ytmusic-search-box {
+        background: rgba(var(--fg-color-main-rgb),.15) !important;
+        color: rgba(var(--fg-color-dark-rgb), .4) !important;
+    }
+    ytmusic-search-box[is-bauhaus-sidenav-enabled] {
+        --ytmusic-search-border: rgba(var(--fg-color-main-rgb), .25) !important;
+        --ytmusic-search-background: var(--bg-color-dark) !important;
+    }
+    .ytmd-history-back, .ytmd-history-forward, .ytmusic-search-suggestion, input.ytmusic-search-box::placeholder {
+        color: rgba(var(--fg-color-main-rgb),.5) !important;
+        font-size: var(--font-smallest);
+    }
+    ytmusic-app[is-bauhaus-sidenav-enabled] {
+        --ytmusic-content-width: min(calc(100vw - 1.5vw - var(--ytmusic-guide-width) - var(--ytmusic-scrollbar-width)),1478px) !important;
+    }
+    yt-icon-button.ytmusic-player-bar::before {
+        position: absolute;
+        top: 8px;
+        left: 8px
+    }
+    .right-controls > .play-pause-button::before {
+        top: 16px !important;
+        left: 16px !important;
+    }
+    .right-controls > .next-button::before {
+        top: 12px !important;
+        left: 12px !important;
+    }
+    .left-controls-buttons {
+        margin-top: -15px;
+        margin-right: 15px;
+    }
+    ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_LARGE_TRANSLUCENT_AND_SELECTED_WHITE] a.ytmusic-chip-cloud-chip-renderer {
+        color: rgba(var(--fg-color-cold-rgb), .9) !important;
+        text-shadow: 0.5px 1px 2px rgba(var(--bg-color-dark-rgb), 0.8) !important;
+        font-weight: bold;
+        background-color: var(--bg-color-dark) !important;
+    }
+    ytmusic-carousel:hover, ytmusic-carousel:active, ytmusic-carousel:focus {
+        scrollbar-color: rgba(var(--fg-color-main-rgb),.53) transparent !important;
+    }
+    .strapline.ytmusic-carousel-shelf-basic-header-renderer {
+        color: var(--fg-color-main) !important;
+    }
+    #progress-bar.ytmusic-player-bar {
+        --paper-slider-active-color: linear-gradient(to right, var(--fg-color-warm) 20%, var(--fg-color-main) 80%) !important;
+        --paper-slider-knob-color: var(--fg-color-warm) !important;
+        --paper-slider-knob-start-color: var(--fg-color-warm) !important;
+        --paper-slider-knob-end-color: var(--fg-color-main) !important;
+    }
+    .volume-slider.ytmusic-player-bar, .expand-volume-slider.ytmusic-player-bar {
+        --paper-slider-container-color: rgba(var(--fg-color-main-rgb),.4) !important;
+        --paper-slider-active-color: rgba(var(--fg-color-main-rgb),.8) !important;
+        --paper-slider-knob-color: var(--fg-color-main) !important;
+        --paper-slider-disabled-knob-color: rgba(var(--fg-color-main-rgb),.33) !important;
+        --paper-slider-knob-start-color: var(--fg-color-warm) !important;
+        --paper-slider-knob-start-border-color: var(--fg-color-main) !important;
+    }
+    tp-yt-iron-icon.tp-yt-paper-icon-button {
+        --iron-icon-width: 150% !important;
+        --iron-icon-height: 110% !important;
+        fill: rgba(var(--fg-color-main-rgb),.53) !important;
+        top: -3px !important;
+        left: -3px !important;
+    }
+    .text.ytmusic-menu-service-item-renderer, .description.ytmusic-description-shelf-renderer, ytmusic-description-shelf-renderer:not([has-strapline]) .description.non-expandable.ytmusic-description-shelf-renderer, ytmusic-player-page tp-yt-paper-tabs .tp-yt-paper-tabs[style-target=content] {
+        color: var(--fg-color-main) !important;
+    }
+    ytmusic-description-shelf-renderer:not([has-strapline]) .description.non-expandable.ytmusic-description-shelf-renderer {
+        color: var(--fg-color-main) !important;
+    }
+    *:not(disabled *) ytmusic-player-page tp-yt-paper-tabs .tp-yt-paper-tabs[style-target=content] {
+        color: var(--fg-color-main) !important;
+    }
+    tp-yt-paper-tab.ytmusic-player-page {
+         --paper-tab-ink: var(--fg-color-main) !important;
+         color: rgba(var(--fg-color-main-rgb),.7) !important;
+    }
+    tp-yt-paper-tabs.ytmusic-player-page {
+        --paper-tabs-selection-bar-color: var(--fg-color-main) !important;
+        border-bottom: 1px solid rgba(var(--fg-color-main-rgb),.7) !important;
+    }
+    #side-panel.side-panel.ytmusic-player-page > tp-yt-paper-tabs.tab-header-container > #tabsContainer > #tabsContent > tp-yt-paper-tab.tab-header > div {
+        font-family: "Galmuri7" !important;
+        font-size: 8px;
+        padding-left: 1px;
+    }
+    ytmusic-player-bar {
+        background-color: var(--bg-color-dark) !important;
+    }
+    .content.ytmusic-player-page {
+        background-color: var(--bg-color-main) !important;
+    }
+    ytmusic-nav-bar {
+        background-color: var(--bg-color-dark) !important;
+    }
+    #player-bar-background.ytmusic-app-layout {
+        background: var(--bg-color-dark) !important;
+    }
+    ytmusic-app-layout[is-bauhaus-sidenav-enabled] #nav-bar-background.ytmusic-app-layout {
+        background-color: var(--bg-color-main)!important;
+    }
+    ytmusic-grid-renderer {
+        background-color: var(--bg-color-main)!important;
+    }
+    ytmusic-browse-response {
+        background-color: var(--bg-color-main)!important;
+    }
+    ytmusic-app-layout[player-visible] > #content {
+        background-color: var(--bg-color-main)!important;
+    }
+    .yt-icon, yt-icon, .yt-icon-container.yt-icon, .yt-icon > div {
+        fill: var(--fg-color-main)!important;
+        stroke: var(--fg-color-main)!important;
+        image-rendering: pixelated !important;
+    }
+    .ytmusic-inline-badge-renderer > .yt-icon > div {
+        fill: currentColor !important;
+        image-rendering: pixelated !important;
+    }
+    ytmusic-two-row-item-renderer[has-badges] #inline-badges.ytmusic-two-row-item-renderer {
+        display: block;
+    }
+    .title.ytmusic-guide-entry-renderer {
+        color: var(--fg-color-main)!important;
+    }
+    .logo.ytmusic-logo {
+        filter: brightness(0) saturate(100%) invert(12%) sepia(91%) saturate(7048%) hue-rotate(331deg) brightness(101%) contrast(106%);
+    }
+    ytmusic-background-overlay-renderer {
+        background: linear-gradient(rgba(var(--bg-color-main-rgb), 0.8), rgba(var(--bg-color-dark-rgb), 0.8)) !important;
+    }
+    body {
+        background-color: var(--bg-color-main)!important;
+    }
+    html[dark][dark] {
+        --ytmusic-color-black1: var(--bg-color-main) !important;
+        --ytmusic-color-black2: var(--bg-color-main) !important;
+        --ytmusic-color-black4: var(--bg-color-main) !important;
+        --ytmusic-color-blackpure: var(--bg-color-main) !important;
+        --yt-spec-black-1: var(--bg-color-main) !important;
+        --yt-spec-black-2: var(--bg-color-main) !important;
+        --yt-spec-black-3: var(--bg-color-main) !important;
+        --yt-spec-black-4: var(--bg-color-main) !important;
+        --yt-spec-black-pure: var(--bg-color-main) !important;
+        --yt-spec-menu-background: rgba(var(--bg-color-main-rgb), 0.9) !important;
+        --ytmusic-overlay-text-secondary: rgba(var(--fg-color-main-rgb),.66) !important;
+        --yt-spec-text-primary: var(--fg-color-main) !important;
+        --ytmusic-display-2_-_color: var(--fg-color-main) !important;
+        --yt-endpoint-color: var(--fg-color-main) !important;
+        --yt-endpoint-hover-color: var(--fg-color-main) !important;
+        --yt-endpoint-visited-color: var(--fg-color-main) !important;
+        scrollbar-color: rgba(var(--fg-color-main-rgb),.6) transparent;
+        --ytmusic-background-overlay-background: linear-gradient(rgba(var(--bg-color-main-rgb), 0.8), rgba(var(--bg-color-dark-rgb), 0.8)) !important;
+        --yt-icon-button-icon-width: 24px;
+        --yt-icon-button-icon-height: 24px;
+        --paper-slider-knob-top: -3px;
+        --yt-spec-button-chip-background-hover: rgba(var(--fg-color-main-rgb),0.9);
+        --ytmusic-setting-item-toggle-active: var(--fg-color-main) !important;
+        --ytmusic-color-white1: var(--fg-color-main) !important;
+        --ytmusic-color-grey2: rgba(var(--fg-color-main-rgb),.9) !important;
+        --ytmusic-color-grey3: rgba(var(--fg-color-main-rgb),.7) !important;
+        --ytmusic-color-grey4: rgba(var(--fg-color-main-rgb),.65) !important;
+        --ytmusic-color-grey5: rgba(var(--fg-color-main-rgb),.6) !important;
+        --ytmusic-color-lightred: rgba(var(--fg-color-warm-rgb),.9) !important;
+        --ytmusic-color-youtubered: var(--fg-color-warm) !important;
+        --ytmusic-color-mediumred: rgba(var(--fg-color-warm-rgb),.95) !important;
+        --ytmusic-color-white1-alpha10: rgba(var(--fg-color-main-rgb),0.1);
+        --ytmusic-color-white1-alpha15: rgba(var(--fg-color-main-rgb),0.15);
+        --ytmusic-color-white1-alpha20: rgba(var(--fg-color-main-rgb),0.2);
+        --ytmusic-color-white1-alpha30: rgba(var(--fg-color-main-rgb),0.3);
+        --ytmusic-color-white1-alpha50: rgba(var(--fg-color-main-rgb),0.5);
+        --ytmusic-color-white1-alpha70: rgba(var(--fg-color-main-rgb),0.7);
+        --ytmusic-color-blackpure-alpha0: rgba(var(--bg-color-dark-rgb),0);
+        --ytmusic-color-blackpure-alpha10: rgba(var(--bg-color-dark-rgb),0.1);
+        --ytmusic-color-blackpure-alpha60: rgba(var(--bg-color-dark-rgb),0.6);
+        --ytmusic-color-blackpure-alpha65: rgba(var(--bg-color-dark-rgb),0.65);
+        --ytmusic-color-mediumred-alpha90: rgba(var(--fg-color-warm-rgb),0.9);
+        --ytmusic-opalescence-dark-grey: var(--bg-color-dark);
+        --ytmusic-color-white-opacity-0-05: rgba(var(--bg-color-dark-rgb),0.05);
+        --ytmusic-color-white-opacity-0-5: rgba(var(--fg-color-main-rgb),0.5);
+        --ytmusic-color-black-opacity-0-4: rgba(var(--bg-color-dark-rgb),0.4);
+        --ytmusic-color-grey-4: rgba(var(--fg-color-main-rgb),.65) !important;
+        --ytmusic-white-5: rgba(var(--fg-color-main-rgb),.5) !important;
+
+        --ytmusic-scrollbar-width: 0px;
+
+        --ytmusic-display-1-font-size: var(--font-double) !important;
+        --ytmusic-display-2-font-size: var(--font-medium) !important;
+        --ytmusic-responsive-font-size: var(--font-smallest) !important;
+        --font-smallest: 10px !important;
+        --font-medium: 15px !important;
+        --font-double: 20px !important;
+    }
+    #icon.navigation-icon.tab-icon > svg.iron-icon {
+        color: rgb(var(--fg-color-main-rgb), 0.875);
+    }
+    svg {
+        shape-rendering: crispedges;
+    }
+    yt-icon.ytmusic-search-box > .ytSpecIconShapeHost > div > svg {
+        color: var(--fg-color-main)
+    }
+    button[aria-label="Shuffle"] > div.yt-spec-button-shape-next__button-text-content > span:first-child,
+    button[aria-label="Radio"] > div.yt-spec-button-shape-next__button-text-content > span:first-child {
+        color: white !important;
+    }
+    nav#ytmd-title-bar-main-panel {
+        padding: 0;
+        background: var(--bg-color-dark);
+        color: var(--fg-color-main);
+        margin-top: -2px;
+    }
+    nav#ytmd-title-bar-main-panel > li {
+        padding: 0 4px;
+        margin: -1px;
+    }
+    ul[data-ytmd-sub-panel="true"] {
+        background-color: rgba(var(--bg-color-dark-rgb), .625);
+    }
+    ul[data-ytmd-sub-panel="true"] > li {
+        min-height: 24px;
+        height: 24px;
+        align-content: center;
+    }
+    div:not(:nth-of-type(1)):not(:nth-of-type(2)) > ul[data-ytmd-sub-panel="true"] > li {
+        grid-template-columns: 8px 1fr auto minmax(8px, auto);
+    }
+    ul[data-ytmd-sub-panel="true"] > li > span {
+        color: var(--fg-color-main);
+    }
+    ytmusic-app-layout:before {
+        content: "";
+        background: var(--bg-color-dark);
+        height: 2px;
+        width: 110vw;
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: -10px;
+        z-index: 1;
+    }
+    ytmusic-nav-bar {
+        width: 100vw;
+    }
+    div#header {
+        margin-top: -25px;
+        width: calc(100% + 10px);
+        margin-left: 0px;
+        padding: 0;
+    }
+    #divider.ytmusic-guide-section-renderer {
+        border-color: rgba(var(--fg-color-main-rgb),.25) !important;
+    }
+    ytmusic-chip-cloud-chip-renderer.ytmusic-chip-cloud-renderer {
+        margin-top: -3.5vh;
+    }
+    tp-yt-paper-slider, .tp-yt-paper-slider, .tp-yt-paper-progress {
+        --paper-progress-active-color: var(--fg-color-main) !important;
+        --paper-progress-secondary-color: rgba(var(--fg-color-main-rgb),.53) !important;
+        --paper-progress-container-color: rgba(var(--fg-color-main-rgb),.33) !important;
+        --paper-slider-knob-inner-size: 8px;
+    }
+    .slider-knob-inner.tp-yt-paper-slider {
+        border-radius: 0 !important;
+        margin: 12px !important;
+        margin-top: 10px !important;
+        --paper-slider-knob-color: rgba(0,0,0,0) !important;
+    }
+    .slider-knob-inner.tp-yt-paper-slider:after {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='icons_fin' data-name='icons fin' xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='7 1 6 1 6 0 2 0 2 1 1 1 1 2 0 2 0 6 1 6 1 7 2 7 2 8 6 8 6 7 7 7 7 6 8 6 8 2 7 2 7 1'/%3E%3C/svg%3E");;
+        margin-left: -2px !important;
+    }
+    .current-time.ytmusic-player-controls, .total-time.ytmusic-player-controls {
+        color: rgba(var(--fg-color-main-rgb),.6) !important;
+        font-size: var(--font-smallest) !important;
+    }
+    .title {
+        color: var(--fg-color-main) !important;
+        font-size: var(--font-double) !important;
+    }
+    .ytmusic-av-toggle, .description.ytmusic-description-shelf-renderer {
+        color: rgba(var(--fg-color-main-rgb),.66) !important;
+        font-size: var(--font-smallest) !important;
+    }
+    .byline, .yt-core-attributed-string {
+        color: rgba(var(--fg-color-main-rgb),.8) !important;
+        font-size: var(--font-smallest) !important;
+    }
+    #main-panel .byline {
+        margin-top: -12px !important;
+    }
+    .yt-spec-button-shape-next--filled {
+        color: white !important;
+        background-color: var(--fg-color-main) !important;
+    }
+    .yt-spec-button-shape-next--text, .ytmusic-responsive-header-renderer[button-renderer]:not(.thumbnail-edit-button), .ytmusic-responsive-header-renderer[dropdown-only], .ytmusic-responsive-header-renderer[role="button"]{
+        --yt-button-color: var(--fg-color-main) !important;
+        color: var(--fg-color-main) !important;
+        background-color: rgba(var(--bg-color-dark-rgb), .35) !important;
+    }
+    .play-pause-button-wrapper.ytmusic-player-controls {
+        background: none !important;
+    }
+    .play-pause-button-wrapper.ytmusic-player-controls::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='icons_fin' data-name='icons fin' xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; opacity: .4; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='70 27 70 24 69 24 69 21 68 21 68 20 68 19 67 19 67 18 66 18 66 17 66 16 65 16 65 15.56 65 15 64 15 64 14 64 13 63 13 63 12 62 12 62 11 61 11 61 10 60 10 60 9 59 9 59 8 58 8 58 7 57 7 56 7 56 6 55.44 6 55 6 55 5 54 5 53 5 53 4 52 4 52 3 51 3 50 3 50 2 47 2 47 1 44 1 44 0 28 0 28 1 25 1 25 2 22 2 22 3 21 3 20 3 20 4 19 4 19 5 18 5 17 5 17 6 16.56 6 16 6 16 7 15 7 14 7 14 8 13 8 13 9 12 9 12 10 11 10 11 11 10 11 10 12 9 12 9 13 8 13 8 14 8 15 7 15 7 15.56 7 16 6 16 6 17 6 18 5 18 5 19 4 19 4 20 4 21 3 21 3 24 2 24 2 27 1 27 1 43 2 43 2 46 3 46 3 49 4 49 4 50 4 51 5 51 5 52 6 52 6 53 6 54 7 54 7 54.44 7 55 8 55 8 56 8 57 9 57 9 58 10 58 10 59 11 59 11 60 12 60 12 61 13 61 13 62 14 62 14 63 15 63 16 63 16 64 16.56 64 17 64 17 65 18 65 19 65 19 66 20 66 20 67 21 67 22 67 22 68 25 68 25 69 28 69 28 70 44 70 44 69 47 69 47 68 50 68 50 67 51 67 52 67 52 66 53 66 53 65 54 65 55 65 55 64 55.44 64 56 64 56 63 57 63 58 63 58 62 59 62 59 61 60 61 60 60 61 60 61 59 62 59 62 58 63 58 63 57 64 57 64 56 64 55 65 55 65 54.44 65 54 66 54 66 53 66 52 67 52 67 51 68 51 68 50 68 49 69 49 69 46 70 46 70 43 71 43 71 27 70 27'/%3E%3C/svg%3E");
+        position: absolute;
+        image-rendering: pixelated;
+        height: 100%;
+        top: 1px;
+    }
+    tp-yt-paper-tab {
+        color: rgba(var(--fg-color-main-rgb),.8) !important;
+        font-size: var(--font-smallest);
+    }
+    .side-panel.ytmusic-player-page {
+        background: var(--bg-color-main) !important;
+    }
+    .title.ytmusic-queue-header-renderer, .song-title.ytmusic-player-queue-item {
+        font-size: var(--font-smallest) !important;
+    }
+    .subtitle.ytmusic-queue-header-renderer, .byline.ytmusic-player-queue-item {
+        font-size: var(--font-smallest) !important;
+        color: rgba(var(--fg-color-main-rgb),.59) !important;
+        margin-top: -4px !important;
+    }
+    ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_LARGE_TRANSLUCENT_AND_SELECTED_WHITE] a.ytmusic-chip-cloud-chip-renderer {
+        font-size: var(--font-smallest) !important;
+    }
+    .immersive-background.ytmusic-browse-response ytmusic-fullbleed-thumbnail-renderer.ytmusic-browse-response {
+        top: -10vh;
+        height: 100vh;
+        opacity: .10;
+        filter: blur(10vh);
+    }
+    :root {
+        --ytmusic-color-black1: var(--bg-color-main)!important;
+        --ytmusic-color-black2: var(--bg-color-main)!important;
+        --ytmusic-color-black4: var(--bg-color-main)!important;
+        --ytmusic-color-blackpure: var(--bg-color-main)!important;
+        --yt-spec-black-1: var(--bg-color-main)!important;
+        --yt-spec-black-2: var(--bg-color-main)!important;
+        --yt-spec-black-3: var(--bg-color-main)!important;
+        --yt-spec-black-4: var(--bg-color-main)!important;
+        --yt-spec-black-pure: var(--bg-color-main)!important;
+        --ytmusic-overlay-text-secondary: rgba(var(--fg-color-main-rgb),.66) !important;
+        --yt-spec-text-primary: var(--fg-color-main) !important;
+        --paper-progress-active-color: var(--fg-color-main) !important;
+        --paper-progress-secondary-color: rgba(var(--fg-color-main-rgb),.66) !important;
+        --paper-progress-container-color: rgba(var(--fg-color-main-rgb),.4) !important;
+    }
+    nav#ytmd-title-bar-main-panel > button:nth-child(1) svg {
+        display: none !important;
+    }
+    nav#ytmd-title-bar-main-panel > button:nth-child(1)::before {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -0.5 16 16' shape-rendering='crispEdges'%3E%3Cmetadata%3EMade with Pixels to Svg https://codepen.io/shshaw/pen/XbxvNj%3C/metadata%3E%3Cpath stroke='%23ff0066' d='M1 2h11M1 3h11M1 4h11M1 7h14M1 8h14M1 9h14M1 12h8M1 13h8M1 14h8' /%3E%3C/svg%3E");
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: relative;
+    }
+    nav#ytmd-title-bar-main-panel > div:last-child {
+        display: none !important;
+    }
+    #main-panel yt-icon-button::before {
+        width: 24px;
+        display: block;
+        top: 6px;
+        left: 6px;
+        position: relative;
+    }
+    button[aria-label="Play"] > yt-icon > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon-button[title="Play"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='22 11 22 10 21 10 20 10 20 9 19 9 18 9 18 8 17 8 16 8 16 7 15 7 14 7 14 6 13 6 12 6 12 5 11 5 10 5 10 4 9 4 8 4 8 3 7 3 6 3 6 2 5 2 4 2 4 1 3 1 2 1 1 1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 1 20 1 21 1 22 1 23 2 23 3 23 4 23 4 22 5 22 6 22 6 21 7 21 8 21 8 20 9 20 10 20 10 19 11 19 12 19 12 18 13 18 14 18 14 17 15 17 16 17 16 16 17 16 18 16 18 15 19 15 20 15 20 14 21 14 22 14 22 13 23 13 23 12 23 11 22 11'/%3E%3C/svg%3E");
+    }
+    #main-panel yt-icon-button[title="Play"]::before {
+        left: 10px;
+        top: 8px;
+    }
+    #left-controls > .left-controls-buttons > #play-pause-button {
+        left: 8px;
+        top: 8px;
+    }
+    button[aria-label="Pause"] > yt-icon > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon-button[title="Pause"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='8 1 7 1 6 1 6 2 5 2 5 3 5 4 5 5 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 5 16 5 17 5 18 5 19 5 20 5 21 5 22 6 22 6 23 7 23 8 23 9 23 9 22 9 21 9 20 9 19 9 18 9 17 9 16 9 15 9 14 9 13 9 12 9 11 9 10 9 9 9 8 9 7 9 6 9 5 9 4 9 3 9 2 9 1 8 1'/%3E%3Cpolygon class='cls-1' points='18 2 18 1 17 1 16 1 15 1 15 2 15 3 15 4 15 5 15 6 15 7 15 8 15 9 15 10 15 11 15 12 15 13 15 14 15 15 15 16 15 17 15 18 15 19 15 20 15 21 15 22 15 23 16 23 17 23 18 23 18 22 19 22 19 21 19 20 19 19 19 18 19 17 19 16 19 15 19 14 19 13 19 12 19 11 19 10 19 9 19 8 19 7 19 6 19 5 19 4 19 3 19 2 18 2'/%3E%3C/svg%3E");
+    }
+    #main-panel yt-icon-button[title="Pause"]::before {
+        left: 8px;
+        top: 8px !important;
+    }
+    button[aria-label="Next"] > yt-icon.ytmusic-player-bar > .style-scope.yt-icon {
+        display: none !important;
+    }
+    button[aria-label="Next"] > yt-icon.ytmusic-player-controls > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon[icon="yt-sys-icons:chevron_right"] > span.yt-icon > div {
+        margin-left: -5px;
+        margin-top: -7px;
+    }
+    yt-icon-button[title="Next"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='21 1 20 1 19 1 19 2 19 3 19 4 19 5 19 6 19 7 19 8 18 8 17 8 17 7 16 7 15 7 15 6 14 6 13 6 13 5 12 5 11 5 11 4 10 4 9 4 9 3 8 3 7 3 7 2 6 2 5 2 5 1 4 1 3 1 2 1 2 2 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 2 18 2 19 2 20 2 21 2 22 2 23 3 23 4 23 5 23 5 22 6 22 7 22 7 21 8 21 9 21 9 20 10 20 11 20 11 19 12 19 13 19 13 18 14 18 15 18 15 17 16 17 17 17 17 16 18 16 19 16 19 17 19 18 19 19 19 20 19 21 19 22 19 23 20 23 21 23 22 23 22 22 22 21 22 20 22 19 22 18 22 17 22 16 22 15 22 14 22 13 22 12 22 11 22 10 22 9 22 8 22 7 22 6 22 5 22 4 22 3 22 2 22 1 21 1'/%3E%3C/svg%3E");
+    }
+    button[aria-label="Previous"] > yt-icon.ytmusic-player-bar > .style-scope.yt-icon {
+        display: none !important;
+    }
+    button[aria-label="Previous"] > yt-icon.ytmusic-player-controls > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon[icon="yt-sys-icons:chevron_left"] > span.yt-icon > div {
+        margin-left: -9px;
+        margin-top: -7px;
+    }
+    yt-icon-button[title="Previous"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='21 1 20 1 19 1 19 2 18 2 17 2 17 3 16 3 15 3 15 4 14 4 13 4 13 5 12 5 11 5 11 6 10 6 9 6 9 7 8 7 7 7 7 8 6 8 5 8 5 7 5 6 5 5 5 4 5 3 5 2 5 1 4 1 3 1 2 1 2 2 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 2 18 2 19 2 20 2 21 2 22 2 23 3 23 4 23 5 23 5 22 5 21 5 20 5 19 5 18 5 17 5 16 6 16 7 16 7 17 8 17 9 17 9 18 10 18 11 18 11 19 12 19 13 19 13 20 14 20 15 20 15 21 16 21 17 21 17 22 18 22 19 22 19 23 20 23 21 23 22 23 22 22 22 21 22 20 22 19 22 18 22 17 22 16 22 15 22 14 22 13 22 12 22 11 22 10 22 9 22 8 22 7 22 6 22 5 22 4 22 3 22 2 22 1 21 1'/%3E%3C/svg%3E");
+    }
+    button[aria-label="Shuffle"] > yt-icon > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon-button[title="Shuffle"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f069; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='22 5 22 4 21 4 21 3 20 3 20 2 19 2 19 1 18 1 18 2 18 3 18 4 17 4 16 4 15 4 14 4 13 4 13 5 12 5 12 6 11 6 11 7 11 8 12 8 12 9 12 10 13 10 13 9 14 9 14 8 15 8 15 7 16 7 17 7 18 7 18 8 18 9 18 10 19 10 19 9 20 9 20 8 21 8 21 7 22 7 22 6 23 6 23 5 22 5'/%3E%3Cpolygon class='cls-1' points='22 17 21 17 21 16 20 16 20 15 19 15 19 14 18 14 18 15 18 16 18 17 17 17 16 17 15 17 15 16 14 16 14 15 13 15 13 14 12 14 12 13 12 12 11 12 11 11 10 11 10 10 10 9 9 9 9 8 8 8 8 7 8 6 7 6 7 5 6 5 6 4 5 4 4 4 3 4 2 4 1 4 1 5 1 6 1 7 2 7 3 7 4 7 4 8 5 8 5 9 6 9 6 10 7 10 7 11 7 12 8 12 8 13 9 13 9 14 9 15 10 15 10 16 11 16 11 17 11 18 12 18 12 19 13 19 13 20 14 20 15 20 16 20 17 20 18 20 18 21 18 22 18 23 19 23 19 22 20 22 20 21 21 21 21 20 22 20 22 19 23 19 23 18 22 18 22 17'/%3E%3Cpolygon class='cls-1' points='7 15 7 14 6 14 6 15 5 15 5 16 4 16 4 17 3 17 2 17 1 17 1 18 1 19 1 20 2 20 3 20 4 20 5 20 6 20 6 19 7 19 7 18 8 18 8 17 8 16 7 16 7 15'/%3E%3C/svg%3E");
+        top: 0 !important;
+        left: 0 !important;
+    }
+    #top-player-bar[shuffle-on] ~ #main-panel yt-icon-button[title="Shuffle"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='22 5 22 4 21 4 21 3 20 3 20 2 19 2 19 1 18 1 18 2 18 3 18 4 17 4 16 4 15 4 14 4 13 4 13 5 12 5 12 6 11 6 11 7 11 8 12 8 12 9 12 10 13 10 13 9 14 9 14 8 15 8 15 7 16 7 17 7 18 7 18 8 18 9 18 10 19 10 19 9 20 9 20 8 21 8 21 7 22 7 22 6 23 6 23 5 22 5'/%3E%3Cpolygon class='cls-1' points='22 17 21 17 21 16 20 16 20 15 19 15 19 14 18 14 18 15 18 16 18 17 17 17 16 17 15 17 15 16 14 16 14 15 13 15 13 14 12 14 12 13 12 12 11 12 11 11 10 11 10 10 10 9 9 9 9 8 8 8 8 7 8 6 7 6 7 5 6 5 6 4 5 4 4 4 3 4 2 4 1 4 1 5 1 6 1 7 2 7 3 7 4 7 4 8 5 8 5 9 6 9 6 10 7 10 7 11 7 12 8 12 8 13 9 13 9 14 9 15 10 15 10 16 11 16 11 17 11 18 12 18 12 19 13 19 13 20 14 20 15 20 16 20 17 20 18 20 18 21 18 22 18 23 19 23 19 22 20 22 20 21 21 21 21 20 22 20 22 19 23 19 23 18 22 18 22 17'/%3E%3Cpolygon class='cls-1' points='7 15 7 14 6 14 6 15 5 15 5 16 4 16 4 17 3 17 2 17 1 17 1 18 1 19 1 20 2 20 3 20 4 20 5 20 6 20 6 19 7 19 7 18 8 18 8 17 8 16 7 16 7 15'/%3E%3C/svg%3E");
+        top: 0 !important;
+        left: 0 !important;
+    }
+    button[aria-label^="Repeat"] > yt-icon > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon-button[label^="Repeat"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f069; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='22 5 22 4 21 4 21 3 20 3 20 2 19 2 19 1 18 1 18 2 18 3 18 4 17 4 16 4 15 4 14 4 13 4 12 4 11 4 10 4 9 4 8 4 7 4 6 4 5 4 5 5 4 5 4 6 3 6 3 7 3 8 3 9 3 10 4 10 5 10 6 10 6 9 6 8 7 8 7 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 7 18 7 18 8 18 9 18 10 19 10 19 9 20 9 20 8 21 8 21 7 22 7 22 6 23 6 23 5 22 5'/%3E%3Cpolygon class='cls-1' points='19 14 18 14 18 15 18 16 17 16 17 17 16 17 15 17 14 17 13 17 12 17 11 17 10 17 9 17 8 17 7 17 6 17 6 16 6 15 6 14 5 14 5 15 4 15 4 16 3 16 3 17 2 17 2 18 1 18 1 19 2 19 2 20 3 20 3 21 4 21 4 22 5 22 5 23 6 23 6 22 6 21 6 20 7 20 8 20 9 20 10 20 11 20 12 20 13 20 14 20 15 20 16 20 17 20 18 20 19 20 19 19 20 19 20 18 21 18 21 17 21 16 21 15 21 14 20 14 19 14'/%3E%3C/svg%3E");
+        top: 0 !important;
+        left: 0 !important;
+    }
+    #top-player-bar[repeat-mode="ALL"] ~ #main-panel yt-icon-button[label^="Repeat"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='22 5 22 4 21 4 21 3 20 3 20 2 19 2 19 1 18 1 18 2 18 3 18 4 17 4 16 4 15 4 14 4 13 4 12 4 11 4 10 4 9 4 8 4 7 4 6 4 5 4 5 5 4 5 4 6 3 6 3 7 3 8 3 9 3 10 4 10 5 10 6 10 6 9 6 8 7 8 7 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 7 18 7 18 8 18 9 18 10 19 10 19 9 20 9 20 8 21 8 21 7 22 7 22 6 23 6 23 5 22 5'/%3E%3Cpolygon class='cls-1' points='19 14 18 14 18 15 18 16 17 16 17 17 16 17 15 17 14 17 13 17 12 17 11 17 10 17 9 17 8 17 7 17 6 17 6 16 6 15 6 14 5 14 5 15 4 15 4 16 3 16 3 17 2 17 2 18 1 18 1 19 2 19 2 20 3 20 3 21 4 21 4 22 5 22 5 23 6 23 6 22 6 21 6 20 7 20 8 20 9 20 10 20 11 20 12 20 13 20 14 20 15 20 16 20 17 20 18 20 19 20 19 19 20 19 20 18 21 18 21 17 21 16 21 15 21 14 20 14 19 14'/%3E%3C/svg%3E");
+        top: 0 !important;
+        left: 0 !important;
+    }
+    #top-player-bar[repeat-mode="ONE"] ~ #main-panel yt-icon-button[label^="Repeat"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2_copy' data-name='Layer 2 copy' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='12 11 12 12 12 13 12 14 12 15 12 16 13 16 13 15 13 14 13 13 13 12 13 11 13 10 13 9 13 8 12 8 11 8 11 9 12 9 12 10 12 11'/%3E%3Cpolygon class='cls-1' points='22 5 22 4 21 4 21 3 20 3 20 2 19 2 19 1 18 1 18 2 18 3 18 4 17 4 16 4 15 4 14 4 13 4 12 4 11 4 10 4 9 4 8 4 7 4 6 4 5 4 5 5 4 5 4 6 3 6 3 7 3 8 3 9 3 10 4 10 5 10 6 10 6 9 6 8 7 8 7 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 7 18 7 18 8 18 9 18 10 19 10 19 9 20 9 20 8 21 8 21 7 22 7 22 6 23 6 23 5 22 5'/%3E%3Cpolygon class='cls-1' points='19 14 18 14 18 15 18 16 17 16 17 17 16 17 15 17 14 17 13 17 12 17 11 17 10 17 9 17 8 17 7 17 6 17 6 16 6 15 6 14 5 14 5 15 4 15 4 16 3 16 3 17 2 17 2 18 1 18 1 19 2 19 2 20 3 20 3 21 4 21 4 22 5 22 5 23 6 23 6 22 6 21 6 20 7 20 8 20 9 20 10 20 11 20 12 20 13 20 14 20 15 20 16 20 17 20 18 20 19 20 19 19 20 19 20 18 21 18 21 17 21 16 21 15 21 14 20 14 19 14'/%3E%3C/svg%3E");
+        top: 0 !important;
+        left: 0 !important;
+    }
+    button[aria-label="Minimize player page"] > yt-icon > .style-scope.yt-icon {
+        display: none !important;
+    }
+    yt-icon-button.collapse-button::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cmetadata%3EMade with Pixels to Svg https://codepen.io/shshaw/pen/XbxvNj%3C/metadata%3E%3Cpath stroke='%23ff006699' d='M3 5h1M16 5h1M3 6h2M15 6h2M4 7h2M14 7h2M5 8h2M13 8h2M6 9h2M12 9h2M7 10h2M11 10h2M8 11h4M9 12h2' /%3E%3C/svg%3E");
+        top: 20% !important;
+        left: 10% !important;
+    }
+    button[aria-label="Action menu"] > div > span > span > div > svg {
+        display: none !important;
+    }
+    button[aria-label="Action menu"]::before {
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='icons_fin' data-name='icons fin' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f06; %7D %3C/style%3E%3C/defs%3E%3Cpolygon class='cls-1' points='13 3 11 3 11 4 10 4 10 6 11 6 11 7 13 7 13 6 14 6 14 4 13 4 13 3'/%3E%3Cpolygon class='cls-1' points='13 10 11 10 11 11 10 11 10 13 11 13 11 14 13 14 13 13 14 13 14 11 13 11 13 10'/%3E%3Cpolygon class='cls-1' points='13 17 11 17 11 18 10 18 10 20 11 20 11 21 13 21 13 20 14 20 14 18 13 18 13 17'/%3E%3C/svg%3E");
+        top: 7px;
+        left: 12px !important;
+        width: 24px !important;
+        position: relative;
+    }
