@@ -1,17 +1,17 @@
-    :root {
-        --fg-color-main: #f06;
-        --fg-color-main-rgb: 255, 0, 102;
-        --fg-color-warm: #f05;
-        --fg-color-warm-rgb: 255, 0, 85;
-        --fg-color-cold: #f07;
-        --fg-color-cold-rgb: 255, 0, 119;
-        --bg-color-main: #603;
-        --bg-color-main-rgb: 102, 0, 51;
-        --bg-color-dark: #34001a;
-        --bg-color-dark-rgb: 52, 0, 26;
-    }
-    *:not(#tabsContent *) {
-        font-family: "Galmuri9" !important;
+	:root {
+		--fg-color-main: #a096ff;
+		--fg-color-main-rgb: 160, 150, 255;
+		--fg-color-warm: #af87ff;
+		--fg-color-warm-rgb: 175, 135, 255;
+		--fg-color-cold: #9696ff;
+		--fg-color-cold-rgb: 155, 155, 255;
+		--bg-color-main: #110a33;
+		--bg-color-main-rgb: 17, 10, 51;
+		--bg-color-dark: #0a051a;
+		--bg-color-dark-rgb: 10, 5, 26;
+	}
+	*  {
+		font-family: "PictoChat", "NintendoDS" !important;
         -webkit-font-smoothing: none !important;
         -moz-osx-font-smoothing: none !important;
         font-weight: 100 !important;
