@@ -470,10 +470,10 @@
         --paper-progress-secondary-color: rgba(var(--fg-color-main-rgb),.66) !important;
         --paper-progress-container-color: rgba(var(--fg-color-main-rgb),.4) !important;
     }
-    ytmusic-toggle-menu-service-item-renderer > yt-icon > .ytSpecIconShapeHost > div > svg:has(> path[d^="M18.77"]),
-    ytmusic-toggle-menu-service-item-renderer > yt-icon > .ytSpecIconShapeHost > div > svg:has(> path[d^="M3 11h3v10H3V11zm15.77"]),
+    ytmusic-toggle-menu-service-item-renderer > yt-icon > .ytSpecIconShapeHost > div:has(> svg > path[d^="M18.77"]),
+    ytmusic-toggle-menu-service-item-renderer > yt-icon > .ytSpecIconShapeHost > div:has(> svg > path[d^="M3 11h3v10H3V11zm15.77"]),
     ytmusic-like-button-renderer > yt-button-shape > button > div > .ytIconWrapperHost > .yt-icon-shape {
-        display: none;
+        display: none !important;
     }
     ytmusic-toggle-menu-service-item-renderer > yt-icon > .ytSpecIconShapeHost:has(> div > svg > path[d^="M18.77"]):before,
     ytmusic-toggle-menu-service-item-renderer > yt-icon > .ytSpecIconShapeHost:has(> div > svg > path[d^="M3 11h3v10H3V11zm15.77"]):before,
